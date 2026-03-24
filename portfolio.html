@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddu Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#020617;
+}
+
+.logo{
+  color:#38bdf8;
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  animation:fadeIn 1.5s ease;
+}
+
+.hero span{
+  color:#38bdf8;
+}
+
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:#38bdf8;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+/* PROJECTS */
+.projects{
+  padding:50px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#1e293b;
+  margin:15px;
+  padding:20px;
+  width:250px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#334155;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{
+    display:none;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1 class="logo">Siddu.dev</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hello, I'm <span>Siddu</span></h2>
+  <p>I build modern, responsive websites 🚀</p>
+  <button onclick="scrollToProjects()">View Work</button>
+</section>
+
+<section class="projects" id="projects">
+  <h2>My Projects</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>Modern UI with animations</p>
+    </div>
+
+    <div class="card">
+      <h3>Login System</h3>
+      <p>Responsive design</p>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio</h3>
+      <p>Clean and professional</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Siddu | Web Developer</p>
+</footer>
+
+<script>
+function scrollToProjects(){
+  document.getElementById("projects").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+</script>
+
+</body>
+</html>
